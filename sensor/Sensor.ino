@@ -1,5 +1,3 @@
-
-
 byte Data[10];
 byte data[9];
 byte crc;
@@ -35,9 +33,9 @@ void loop() {
     Serial.readBytes(Data,sizebyte_total);
 
 
-
-    crc=uiCrc8Cal(Data,sizebyte_total);
     
+    crc=uiCrc8Cal(Data,sizebyte_total);
+    delay(100);
 
 
     if(crc == 0)
